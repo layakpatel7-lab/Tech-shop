@@ -41,3 +41,4 @@ function Navbar({ cartCount, wishlistCount, onCartClick, onWishlistClick }) {
 }
 
 export default Navbar;
+

@@ -1,9 +1,10 @@
 .navbar {
-  background: #ffffff;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  background: #111122;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid #1e1e3a;
 }
 
 .navbar-container {
@@ -31,7 +32,7 @@
 .logo-text {
   font-size: 22px;
   font-weight: 700;
-  color: #1a1a2e;
+  color: #f0f0f0;
   letter-spacing: -0.5px;
 }
 
@@ -40,15 +41,15 @@
   flex: 1;
   max-width: 420px;
   display: flex;
-  background: #f5f6fa;
+  background: #1a1a30;
   border-radius: 10px;
   overflow: hidden;
-  border: 1.5px solid transparent;
+  border: 1.5px solid #2a2a4a;
   transition: border-color 0.2s;
 }
 
 .navbar-search:focus-within {
-  border-color: #6c5ce7;
+  border-color: #7c6cf0;
 }
 
 .navbar-search input {
@@ -58,7 +59,11 @@
   outline: none;
   font-size: 14px;
   background: transparent;
-  color: #333;
+  color: #e0e0e0;
+}
+
+.navbar-search input::placeholder {
+  color: #555;
 }
 
 .search-btn {
@@ -82,19 +87,19 @@
   gap: 6px;
   padding: 8px 14px;
   background: none;
-  border: 1.5px solid #eee;
+  border: 1.5px solid #2a2a4a;
   border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
-  color: #444;
+  color: #ccc;
   transition: all 0.2s;
   position: relative;
 }
 
 .nav-btn:hover {
-  background: #f5f6fa;
-  border-color: #6c5ce7;
-  color: #6c5ce7;
+  background: #1e1e3a;
+  border-color: #7c6cf0;
+  color: #a99bff;
 }
 
 .nav-icon {
@@ -109,7 +114,7 @@
   position: absolute;
   top: -6px;
   right: -6px;
-  background: #6c5ce7;
+  background: #7c6cf0;
   color: white;
   font-size: 11px;
   font-weight: 700;

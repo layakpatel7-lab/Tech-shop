@@ -1,24 +1,42 @@
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1040 0%, #2d1b69 50%, #0f0c29 100%);
   padding: 60px 24px 50px;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glow effect */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 108, 240, 0.15) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero-content {
   max-width: 700px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-tag {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(124, 108, 240, 0.25);
   backdrop-filter: blur(6px);
   padding: 6px 18px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 20px;
+  border: 1px solid rgba(124, 108, 240, 0.3);
 }
 
 .hero-title {
@@ -30,15 +48,21 @@
 }
 
 .highlight {
-  background: linear-gradient(90deg, #ffeaa7, #fdcb6e);
+  background: linear-gradient(90deg, #a29bfe, #6c5ce7, #a29bfe);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: 200% center; }
 }
 
 .hero-subtitle {
   font-size: 16px;
-  opacity: 0.9;
+  opacity: 0.7;
   line-height: 1.6;
   margin-bottom: 28px;
   max-width: 500px;
@@ -55,8 +79,8 @@
 
 .btn-primary {
   padding: 12px 32px;
-  background: white;
-  color: #6c5ce7;
+  background: linear-gradient(135deg, #7c6cf0, #a29bfe);
+  color: #fff;
   border-radius: 10px;
   font-weight: 700;
   font-size: 15px;
@@ -66,23 +90,24 @@
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(124, 108, 240, 0.35);
 }
 
 .btn-secondary {
   padding: 12px 32px;
   background: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Stats */
@@ -92,10 +117,12 @@
   gap: 40px;
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .stat {
@@ -107,11 +134,12 @@
 .stat-number {
   font-size: 22px;
   font-weight: 800;
+  color: #a29bfe;
 }
 
 .stat-label {
   font-size: 13px;
-  opacity: 0.8;
+  opacity: 0.5;
   margin-top: 4px;
 }
 

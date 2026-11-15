@@ -1,8 +1,8 @@
-/* Reset & Base — keep this minimal */
+/* Reset & Base */
 :root {
   font-size: 16px;
   line-height: 1.5;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 a {

@@ -66,3 +66,4 @@ function Cart({ cartItems, onClose, onRemove, onUpdateQty }) {
 }
 
 export default Cart;
+

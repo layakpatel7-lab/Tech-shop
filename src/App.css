@@ -1,4 +1,4 @@
-/* ===== Global App Styles ===== */
+/* ===== Global App Styles — Dark Theme ===== */
 
 * {
   margin: 0;
@@ -8,8 +8,8 @@
 
 body {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  background: #f5f6fa;
-  color: #333;
+  background: #0d0d1a;
+  color: #e0e0e0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,13 +35,13 @@ body {
 .section-title {
   font-size: 28px;
   font-weight: 800;
-  color: #1a1a2e;
+  color: #f0f0f0;
   margin-bottom: 6px;
 }
 
 .section-subtitle {
   font-size: 15px;
-  color: #888;
+  color: #777;
 }
 
 /* Product Grid */
@@ -55,10 +55,11 @@ body {
 .footer {
   text-align: center;
   padding: 28px 24px;
-  background: #1a1a2e;
-  color: rgba(255, 255, 255, 0.6);
+  background: #08080f;
+  color: rgba(255, 255, 255, 0.35);
   font-size: 14px;
   margin-top: auto;
+  border-top: 1px solid #1a1a2e;
 }
 
 /* ===== Smooth Scrolling ===== */

@@ -45,3 +45,4 @@ function Wishlist({ wishlistItems, onClose, onRemove, onAddToCart }) {
 }
 
 export default Wishlist;
+

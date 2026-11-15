@@ -72,3 +72,4 @@ function ProductCard({ product, onAddToCart, onToggleWishlist, isInWishlist, isI
 }
 
 export default ProductCard;
+
