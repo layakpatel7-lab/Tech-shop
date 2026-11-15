@@ -1,3 +1,4 @@
+/* ===== Global App Styles ===== */
 
 * {
   margin: 0;
@@ -6,94 +7,77 @@
 }
 
 body {
-  background: #080c0a;
-  color: white;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-.counter {
-  width: 550px;
-  max-width: 90%;
-  padding: 40px 30px;
+/* ===== Products Section ===== */
+.products-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 24px 60px;
+  width: 100%;
+}
+
+.section-header {
   text-align: center;
-  background: #101713;
-  border: 1px solid #00ff88;
-  border-radius: 22px;
-  box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+  margin-bottom: 36px;
 }
 
-.counter h1 {
-  font-size: 35px;
-  margin-bottom: 30px;
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 6px;
 }
 
-.counter h1 span {
-  color: #00ff88;
-}
-
-.count-display {
-  font-size: 85px;
-  font-weight: bold;
-  color: #00ff88;
-  margin-bottom: 30px;
-  padding: 15px;
-  background: #080e0a;
-  border: 1px solid #00ff88;
-  border-radius: 15px;
-}
-
-.button-group {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.button-group button {
-  padding: 13px 18px;
-  border-radius: 9px;
+.section-subtitle {
   font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  color: #888;
 }
 
-.increase {
-  background: #00ff88;
-  color: #06130b;
-  border: 1px solid #00ff88;
+/* Product Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
 }
 
-.decrease {
-  background: transparent;
-  color: white;
-  border: 1px solid #888;
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 28px 24px;
+  background: #1a1a2e;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin-top: auto;
 }
 
-.reset {
-  background: transparent;
-  color: #00ff88;
-  border: 1px solid #00ff88;
+/* ===== Smooth Scrolling ===== */
+html {
+  scroll-behavior: smooth;
 }
 
-.button-group button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
-}
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .products-section {
+    padding: 32px 16px 40px;
+  }
 
-.message {
-  color: #00ff88;
-  margin-top: 25px;
-  font-weight: bold;
-}
+  .section-title {
+    font-size: 22px;
+  }
 
-button:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
 }
